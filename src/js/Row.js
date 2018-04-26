@@ -35,6 +35,7 @@ class Row extends Component {
           type={col.type}
           format={col.format}
           formatter={col.formatter}
+          Elem={col.Elem}
           className={col.class}
           showExpandCollapse={canExpand && (expandColumn.field === col.field)}
           isExpanded={this.props.expanded}

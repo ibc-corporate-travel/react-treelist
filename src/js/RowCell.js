@@ -10,6 +10,7 @@ class RowCell extends Component {
   }
   render() {
     const {
+      Elem,
       reactKey,
       indent,
       useIndent,
@@ -51,6 +52,7 @@ class RowCell extends Component {
     return (
       <td className='tgrid-data-cell'>
         {rowIndent}
+        {Elem ? <Elem/> : null}
         {expandToggleIcon}
         <span className={className}>{displayText}</span>
       </td>
@@ -66,6 +68,7 @@ RowCell.propTypes = {
   type: PropTypes.string,
   format: PropTypes.string,
   formatter: PropTypes.func,
+  Elem: PropTypes.func,
   className: PropTypes.string,
   showExpandCollapse: PropTypes.bool,
   isExpanded: PropTypes.bool,
